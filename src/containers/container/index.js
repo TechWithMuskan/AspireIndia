@@ -1,21 +1,22 @@
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 import React from "react";
 import styles from "./styles";
-import DebitCard from "../debitCard";
-import CardDetail from "../cardDetail";
+import Header from "../../components/molecules/header";
 
 const Container = (props) => {
-  const { children } = props;
-  console.log("children :", children);
+  const { children, scrollEnabled, extraStyles } = props;
+
   return (
     <View style={styles.container}>
-      <View style={styles.topContainer}>
-        <CardDetail />
-      </View>
-      <View style={styles.bottomContainer}>
-        <DebitCard />
+      <Header />
+      <ScrollView
+        nestedScrollEnabled={true}
+        showsVerticalScrollIndicator={false}
+        scrollEnabled={scrollEnabled}
+        style={[styles.containerView, extraStyles]}
+      >
         {children}
-      </View>
+      </ScrollView>
     </View>
   );
 };

@@ -9,7 +9,7 @@ const CardDetail = () => {
   return (
     <View>
       <View style={universalStyle.alignEnd}>
-        <LogoFocused />
+        <LogoFocused height={30} width={30} />
       </View>
       <Text style={styles.title}>Debit Card</Text>
       <Text style={styles.balance}>Available balance</Text>

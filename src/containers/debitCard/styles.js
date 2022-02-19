@@ -2,19 +2,17 @@ import { StyleSheet } from "react-native";
 import { colors, fonts, ratioHeight, ratioWidth } from "../../theme";
 
 const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 8 * ratioWidth,
+  },
   deditCard: {
     backgroundColor: colors.appPrimary,
     padding: 20 * ratioHeight,
     height: 170 * ratioHeight,
-    width: "90%",
     borderRadius: 20,
-    top: "-22%",
-    left: "5%",
   },
   showCard: {
     alignItems: "flex-end",
-    top: "-19.5%",
-    right: "5%",
   },
   username: {
     fontSize: fonts.size.font21,
