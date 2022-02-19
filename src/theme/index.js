@@ -1,21 +1,21 @@
-import colors from './colors';
-import fonts from './fonts';
-import matrics from './metrices';
-import images from './images';
+import colors from "./colors";
+import fonts from "./fonts";
+import matrics from "./matrices";
+import images from "./images";
 
-var heightRef = 627;
-var widthRef = 360;
+var heightRef = 606;
+var widthRef = 414;
 
 const ratioHeight = matrics.screenHeight / heightRef;
 const ratioWidth = matrics.screenWidth / widthRef;
 
 export {
-  colors,
-  matrics,
-  fonts,
   heightRef,
   widthRef,
   ratioHeight,
   ratioWidth,
+  colors,
+  fonts,
+  matrics,
   images,
 };

@@ -1,5 +1,3 @@
-const images = {
-  avatar: require("../assets/images/png/avatar.png"),
-};
+const images = {};
 
 export default images;
