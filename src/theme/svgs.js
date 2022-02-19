@@ -10,6 +10,8 @@ import Account from "../assets/images/svgs/Account.svg";
 import AccountFocused from "../assets/images/svgs/AccountFocused.svg";
 import AspireLogo from "../assets/images/svgs/AspireLogo.svg";
 import VisaLogo from "../assets/images/svgs/VisaLogo.svg";
+import OpenEye from "../assets/images/svgs/OpenEye.svg";
+import CloseEye from "../assets/images/svgs/CloseEye.svg";
 
 export {
   Logo,
@@ -24,4 +26,6 @@ export {
   AccountFocused,
   AspireLogo,
   VisaLogo,
+  OpenEye,
+  CloseEye,
 };

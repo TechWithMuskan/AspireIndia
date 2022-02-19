@@ -12,11 +12,13 @@ const styles = StyleSheet.create({
     top: "25%",
     left: "5%",
   },
-  logo: {
-    alignItems: "flex-end",
+  showCard: {
+    position: "absolute",
+    top: "21%",
+    right: "5%",
   },
   username: {
-    fontSize: fonts.size.font18,
+    fontSize: fonts.size.font21,
     color: colors.white,
     fontFamily: fonts.type.AvenirNextBold,
     marginTop: 22 * ratioHeight,

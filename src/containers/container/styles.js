@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colors, ratioHeight } from "../../theme";
+import { colors, ratioHeight, ratioWidth } from "../../theme";
 
 const styles = StyleSheet.create({
   container: {
@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
   topContainer: {
     flex: 1,
     backgroundColor: colors.appSecondary,
+    paddingHorizontal: 15 * ratioWidth,
+    paddingTop: 10 * ratioHeight,
   },
   bottomContainer: {
     flex: 2,
