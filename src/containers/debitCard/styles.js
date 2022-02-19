@@ -8,13 +8,12 @@ const styles = StyleSheet.create({
     height: 170 * ratioHeight,
     width: "90%",
     borderRadius: 20,
-    position: "absolute",
-    top: "25%",
+    top: "-22%",
     left: "5%",
   },
   showCard: {
-    position: "absolute",
-    top: "21%",
+    alignItems: "flex-end",
+    top: "-19.5%",
     right: "5%",
   },
   username: {
