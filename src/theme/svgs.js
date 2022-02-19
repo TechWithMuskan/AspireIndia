@@ -12,6 +12,11 @@ import AspireLogo from "../assets/images/svgs/AspireLogo.svg";
 import VisaLogo from "../assets/images/svgs/VisaLogo.svg";
 import OpenEye from "../assets/images/svgs/OpenEye.svg";
 import CloseEye from "../assets/images/svgs/CloseEye.svg";
+import Insight from "../assets/images/svgs/Insight.svg";
+import Transfer from "../assets/images/svgs/Transfer.svg";
+import Freeze from "../assets/images/svgs/Freeze.svg";
+import NewCard from "../assets/images/svgs/NewCard.svg";
+import Deactivate from "../assets/images/svgs/Deactivate.svg";
 
 export {
   Logo,
@@ -28,4 +33,9 @@ export {
   VisaLogo,
   OpenEye,
   CloseEye,
+  Insight,
+  Transfer,
+  Freeze,
+  NewCard,
+  Deactivate,
 };

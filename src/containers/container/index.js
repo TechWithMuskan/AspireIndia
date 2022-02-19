@@ -4,14 +4,18 @@ import styles from "./styles";
 import DebitCard from "../debitCard";
 import CardDetail from "../cardDetail";
 
-const Container = () => {
+const Container = (props) => {
+  const { children } = props;
+  console.log("children :", children);
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
         <CardDetail />
       </View>
-      <View style={styles.bottomContainer}></View>
-      <DebitCard />
+      <View style={styles.bottomContainer}>
+        <DebitCard />
+        {children}
+      </View>
     </View>
   );
 };

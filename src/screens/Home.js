@@ -1,11 +1,14 @@
 import { View } from "react-native";
 import React from "react";
-import Header from "../containers/container";
+import Container from "../containers/container";
+import CardServices from "../components/organisms/cardServices";
 
 const Home = () => {
   return (
     <View style={{ flex: 1 }}>
-      <Header />
+      <Container>
+        <CardServices />
+      </Container>
     </View>
   );
 };
