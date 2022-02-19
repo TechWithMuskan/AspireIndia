@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colors, fonts, ratioHeight, ratioWidth } from "../../theme";
+import { colors, fonts, ratioHeight, ratioWidth } from "../../../theme";
 
 const styles = StyleSheet.create({
   deditCard: {

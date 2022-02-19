@@ -1,4 +1,8 @@
 import Home from "../../screens/Home";
+import CreditCard from "../../screens/Credit";
+import DebitCard from "../../screens/DebitCard";
+import Payment from "../../screens/Payment";
+import Profile from "../../screens/Profile";
 import {
   Logo,
   LogoFocused,
@@ -23,24 +27,24 @@ export default [
     name: "Debit Card",
     focused: CardFocused,
     unfocused: Card,
-    route: Home,
+    route: DebitCard,
   },
   {
     name: "Payments",
     focused: PaymentsFocused,
     unfocused: Payments,
-    route: Home,
+    route: Payment,
   },
   {
     name: "Credit",
     focused: CreditFocused,
     unfocused: Credit,
-    route: Home,
+    route: CreditCard,
   },
   {
     name: "Profile",
     focused: AccountFocused,
     unfocused: Account,
-    route: Home,
+    route: Profile,
   },
 ];

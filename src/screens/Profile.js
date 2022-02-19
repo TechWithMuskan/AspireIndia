@@ -3,11 +3,11 @@ import React from "react";
 import Container from "../containers/container";
 import { colors, fonts, ratioHeight, ratioWidth } from "../theme";
 
-const Home = () => {
+const Profile = () => {
   return (
     <View style={styles.container}>
-      <Container extraStyles={styles.subContainer} headerTitle="Home">
-        <Text style={styles.title}>Home Screen</Text>
+      <Container extraStyles={styles.subContainer} headerTitle="Profile">
+        <Text style={styles.title}>Profile Screen</Text>
       </Container>
     </View>
   );
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Profile;

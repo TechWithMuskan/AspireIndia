@@ -3,11 +3,11 @@ import React from "react";
 import Container from "../containers/container";
 import { colors, fonts, ratioHeight, ratioWidth } from "../theme";
 
-const Home = () => {
+const Payment = () => {
   return (
     <View style={styles.container}>
-      <Container extraStyles={styles.subContainer} headerTitle="Home">
-        <Text style={styles.title}>Home Screen</Text>
+      <Container extraStyles={styles.subContainer} headerTitle="Payment">
+        <Text style={styles.title}>Payment Screen</Text>
       </Container>
     </View>
   );
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Payment;

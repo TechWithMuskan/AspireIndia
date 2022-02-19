@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colors, ratioHeight, fonts, ratioWidth } from "../../theme";
+import { colors, ratioHeight, fonts, ratioWidth } from "../../../theme";
 
 const styles = StyleSheet.create({
   title: {

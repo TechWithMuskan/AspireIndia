@@ -6,7 +6,7 @@ import styles from "./styles";
 
 const Tab = createBottomTabNavigator();
 
-export default function BottomNavigation() {
+const BottomTab = () => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -33,4 +33,6 @@ export default function BottomNavigation() {
       ))}
     </Tab.Navigator>
   );
-}
+};
+
+export default BottomTab;

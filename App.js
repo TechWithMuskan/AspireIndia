@@ -1,8 +1,7 @@
 import React from "react";
 import { StatusBar, SafeAreaView } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import BottomNavigation from "./src/navigation/bottomTab";
 import { colors } from "./src/theme";
+import AppRouter from "./src/navigation/AppRouter";
 
 const App = () => {
   return (
@@ -11,9 +10,7 @@ const App = () => {
         backgroundColor={colors.appSecondary}
         barStyle="light-content"
       />
-      <NavigationContainer>
-        <BottomNavigation />
-      </NavigationContainer>
+      <AppRouter />
     </SafeAreaView>
   );
 };

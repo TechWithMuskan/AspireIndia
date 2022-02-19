@@ -1,10 +1,10 @@
 import { View, Text, Image } from "react-native";
 import React, { useState } from "react";
 import styles from "./styles";
-import { getCardFormat } from "../../utils/constants";
-import { AspireLogo, VisaLogo } from "../../theme/svgs";
-import universalStyle from "../../theme/universalStyle";
-import IconButton from "../../components/atoms/iconButton";
+import { getCardFormat } from "../../../utils/constants";
+import { AspireLogo, VisaLogo } from "../../../theme/svgs";
+import universalStyle from "../../../theme/universalStyle";
+import IconButton from "../../../components/atoms/iconButton";
 
 const DebitCard = () => {
   const [cardNum, setCardNum] = useState("5647341124132020");
