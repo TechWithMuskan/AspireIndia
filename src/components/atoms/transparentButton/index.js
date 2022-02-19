@@ -3,9 +3,9 @@ import React from "react";
 import styles from "./styles";
 
 const TransparentButton = (props) => {
-  const { title } = props;
+  const { title, onPress } = props;
   return (
-    <TouchableOpacity style={styles.buttonContainer}>
+    <TouchableOpacity onPress={onPress} style={styles.buttonContainer}>
       <Text style={styles.label}>{title}</Text>
     </TouchableOpacity>
   );

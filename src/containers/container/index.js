@@ -1,27 +1,32 @@
-import { View, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import React from "react";
-import styles from "./styles";
 import Header from "../../components/molecules/header";
 
 const Container = (props) => {
-  const { children, extraStyles, headerContent, headerTitle, showBack } = props;
+  const {
+    children,
+    extraStyles,
+    headerContent,
+    headerTitle,
+    showBack,
+    contentStyle,
+  } = props;
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      stickyHeaderIndices={[0]}
+      nestedScrollEnabled={true}
+      showsVerticalScrollIndicator={false}
+      style={extraStyles}
+      contentContainerStyle={contentStyle}
+    >
       <Header
         children={headerContent}
         title={headerTitle}
         showBack={showBack}
       />
-      <ScrollView
-        nestedScrollEnabled={true}
-        showsVerticalScrollIndicator={false}
-        style={[styles.containerView, extraStyles]}
-        contentContainerStyle={styles.contentStyle}
-      >
-        {children}
-      </ScrollView>
-    </View>
+      {children}
+    </ScrollView>
   );
 };
 

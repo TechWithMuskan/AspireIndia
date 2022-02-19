@@ -25,7 +25,7 @@ const DebitCard = () => {
   };
 
   return (
-    <>
+    <View style={styles.container}>
       <View style={styles.showCard}>
         <IconButton
           onPress={label === "Show card number" ? showNum : hideNum}
@@ -47,7 +47,7 @@ const DebitCard = () => {
           <VisaLogo />
         </View>
       </View>
-    </>
+    </View>
   );
 };
 

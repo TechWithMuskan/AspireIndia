@@ -1,16 +1,21 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import Container from "../../../containers/container";
-import styles from "./styles";
 import UpdateLimit from "../../molecules/updateLimit";
+import universalStyle from "../../../theme/universalStyle";
 
 const SpendingLimit = () => {
   return (
-    <View style={styles.container}>
-      <Container showBack headerTitle="Spending limit">
+    <Container
+      extraStyles={universalStyle.background}
+      contentStyle={universalStyle.flex1}
+      showBack
+      headerTitle="Spending limit"
+    >
+      <View style={universalStyle.subContainer}>
         <UpdateLimit />
-      </Container>
-    </View>
+      </View>
+    </Container>
   );
 };
 
