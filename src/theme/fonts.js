@@ -1,4 +1,4 @@
-import matrics from './metrices';
+import matrics from "./matrices";
 
 const size = {
   font6: matrics.screenWidth * (6 / 365),
@@ -26,18 +26,18 @@ const size = {
 };
 
 const weight = {
-  full: '900',
-  semi: '600',
-  low: '400',
-  bold: 'bold',
-  normal: 'normal',
+  full: "900",
+  semi: "600",
+  low: "400",
+  bold: "bold",
+  normal: "normal",
 };
 
 const type = {
-  montserratMedium: 'Montserrat-Medium',
-  montserratRegular: 'Montserrat-Regular',
-  montserratSemiBold: 'Montserrat-SemiBold',
-  montserratBold: 'Montserrat-Bold',
+  AvenirNextRegular: "AvenirNext-Regular",
+  AvenirNextMedium: "AvenirNext-Medium",
+  AvenirNextDemiBold: "AvenirNext-Demi",
+  AvenirNextBold: "AvenirNext-Bold",
 };
 
 export default {
