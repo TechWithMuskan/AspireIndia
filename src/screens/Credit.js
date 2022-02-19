@@ -1,31 +1,21 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
 import Container from "../containers/container";
-import { colors, fonts, ratioHeight, ratioWidth } from "../theme";
+import universalStyle from "../theme/universalStyle";
 
 const Credit = () => {
   return (
-    <View style={styles.container}>
-      <Container extraStyles={styles.subContainer} headerTitle="Credit Card">
-        <Text style={styles.title}>Credit Card Screen</Text>
-      </Container>
-    </View>
+    <Container
+      headerTitle="Credit Card"
+      extraStyles={universalStyle.background}
+      contentStyle={universalStyle.flex1}
+      showBack
+    >
+      <View style={universalStyle.subContainer}>
+        <Text style={universalStyle.title}>Credit Card Screen</Text>
+      </View>
+    </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  subContainer: {
-    paddingHorizontal: 15 * ratioWidth,
-  },
-  title: {
-    fontSize: fonts.size.font20,
-    fontFamily: fonts.type.AvenirNextBold,
-    color: colors.appPrimary,
-    margin: 30 * ratioHeight,
-  },
-});
 
 export default Credit;

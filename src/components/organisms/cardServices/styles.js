@@ -4,7 +4,7 @@ import { colors, fonts, ratioHeight, ratioWidth } from "../../../theme";
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 15 * ratioWidth,
-    top: "-20%",
+    paddingVertical: 10 * ratioWidth,
   },
   cardContainer: {
     paddingHorizontal: 5 * ratioHeight,

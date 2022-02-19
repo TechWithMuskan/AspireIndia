@@ -3,9 +3,16 @@ import React from "react";
 import styles from "./styles";
 
 const PrimaryButton = (props) => {
-  const { title } = props;
+  const { title, disabled, onPress } = props;
   return (
-    <TouchableOpacity style={styles.buttonContainer}>
+    <TouchableOpacity
+      onPress={onPress}
+      disabled={disabled}
+      style={[
+        styles.buttonContainer,
+        disabled ? styles.disableButton : styles.enableButton,
+      ]}
+    >
       <Text style={styles.label}>{title}</Text>
     </TouchableOpacity>
   );

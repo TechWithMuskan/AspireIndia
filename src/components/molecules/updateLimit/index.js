@@ -1,14 +1,24 @@
+import React, { useState } from "react";
 import { View, Text } from "react-native";
-import React from "react";
+import { useNavigation } from "@react-navigation/core";
 import { Limit } from "../../../theme/svgs";
-import styles from "./styles";
 import { ratioHeight, ratioWidth } from "../../../theme";
-import Button from "../../atoms/button";
 import TransparentButton from "../../atoms/transparentButton";
 import PrimaryButton from "../../atoms/primaryButton";
 import { priceList } from "../../../global/config";
+import Button from "../../atoms/button";
+import styles from "./styles";
 
 const UpdateLimit = () => {
+  const navigation = useNavigation();
+  const [disabled, setDisabled] = useState(true);
+  const [amount, setAmount] = useState();
+
+  const onSelect = (value) => {
+    setDisabled(false);
+    setAmount(value);
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -18,18 +28,28 @@ const UpdateLimit = () => {
             Set a weekly debit card spending limit
           </Text>
         </View>
-        <Button label="S$" />
+        <View style={styles.priceContainer}>
+          <Button label="S$" />
+          <Text style={styles.amount}>{amount}</Text>
+        </View>
         <Text style={styles.detail}>
           Here weekly means the last 7 days - not the calendar week
         </Text>
 
         <View style={styles.bottomContainer}>
           {priceList.map((item) => (
-            <TransparentButton title={`S$ ${item.price}`} />
+            <TransparentButton
+              title={`S$ ${item.price}`}
+              onPress={() => onSelect(item.price)}
+            />
           ))}
         </View>
       </View>
-      <PrimaryButton title="Save" />
+      <PrimaryButton
+        disabled={disabled}
+        title="Save"
+        onPress={() => navigation.navigate("BottomTab")}
+      />
     </View>
   );
 };

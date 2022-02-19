@@ -4,7 +4,9 @@ import { colors, ratioHeight, ratioWidth, fonts } from "../../../theme";
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 15 * ratioWidth,
-    paddingVertical: 10 * ratioHeight,
+    paddingTop: 10 * ratioHeight,
+    paddingBottom: 20 * ratioHeight,
+    backgroundColor: colors.appSecondary,
   },
   subContainer: {
     flexDirection: "row",

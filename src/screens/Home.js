@@ -1,31 +1,20 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
 import Container from "../containers/container";
-import { colors, fonts, ratioHeight, ratioWidth } from "../theme";
+import universalStyle from "../theme/universalStyle";
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Container extraStyles={styles.subContainer} headerTitle="Home">
-        <Text style={styles.title}>Home Screen</Text>
-      </Container>
-    </View>
+    <Container
+      headerTitle="Home"
+      extraStyles={universalStyle.background}
+      contentStyle={universalStyle.flex1}
+    >
+      <View style={universalStyle.subContainer}>
+        <Text style={universalStyle.title}>Home Screen</Text>
+      </View>
+    </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  subContainer: {
-    paddingHorizontal: 15 * ratioWidth,
-  },
-  title: {
-    fontSize: fonts.size.font20,
-    fontFamily: fonts.type.AvenirNextBold,
-    color: colors.appPrimary,
-    margin: 30 * ratioHeight,
-  },
-});
 
 export default Home;
