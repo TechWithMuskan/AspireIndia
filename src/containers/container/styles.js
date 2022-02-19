@@ -13,11 +13,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15 * ratioWidth,
     paddingTop: 10 * ratioHeight,
   },
-  bottomContainer: {
+  containerView: {
     flex: 2,
     backgroundColor: colors.white,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
+  },
+  contentStyle: {
+    flex: 1,
   },
 });
 

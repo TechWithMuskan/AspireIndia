@@ -17,6 +17,7 @@ import Transfer from "../assets/images/svgs/Transfer.svg";
 import Freeze from "../assets/images/svgs/Freeze.svg";
 import NewCard from "../assets/images/svgs/NewCard.svg";
 import Deactivate from "../assets/images/svgs/Deactivate.svg";
+import Limit from "../assets/images/svgs/Limit.svg";
 
 export {
   Logo,
@@ -38,4 +39,5 @@ export {
   Freeze,
   NewCard,
   Deactivate,
+  Limit,
 };

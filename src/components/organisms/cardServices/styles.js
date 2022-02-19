@@ -9,8 +9,6 @@ const styles = StyleSheet.create({
   cardContainer: {
     paddingHorizontal: 5 * ratioHeight,
     paddingVertical: 10 * ratioHeight,
-  },
-  subContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
