@@ -4,16 +4,16 @@ import styles from "./styles";
 import { CloseEye, OpenEye } from "../../../theme/svgs";
 
 const IconButton = (props) => {
-  const { label, onPress, extraStyle } = props;
+  const { showDetail, onPress, extraStyle, label } = props;
   return (
     <TouchableOpacity
       onPress={onPress}
       style={[styles.buttonContainer, extraStyle]}
     >
-      {label === "Show card number" ? (
-        <OpenEye height={18} width={18} />
-      ) : (
+      {showDetail ? (
         <CloseEye height={18} width={18} />
+      ) : (
+        <OpenEye height={18} width={18} />
       )}
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>

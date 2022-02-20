@@ -1,50 +1,87 @@
-import React from "react";
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View } from "react-native";
 import { useNavigation } from "@react-navigation/core";
-import universalStyle from "../../../theme/universalStyle";
-import { ratioHeight, ratioWidth } from "../../../theme";
-import Toggle from "../../atoms/toggle";
-import { serviceList } from "../../../global/config";
+import { useDispatch } from "react-redux";
+
+import { useIsFocused } from "@react-navigation/native";
 import styles from "./styles";
+import ServiceCard from "../../atoms/serviceCard";
+import {
+  Insight,
+  Transfer,
+  Freeze,
+  NewCard,
+  Deactivate,
+} from "../../../theme/svgs";
+import { saveSpendingLimit } from "../../../redux/action";
 
 const CardServices = (props) => {
   const { selectedLimit } = props;
   const navigation = useNavigation();
+  const isFocused = useIsFocused();
+  const dispatch = useDispatch();
 
-  const onNavigate = (id) => {
-    if (id === 2) navigation.navigate("SpendingLimit");
+  const [spLimit, setSpLimit] = useState(false);
+  const [freeze, setFreeze] = useState(false);
+
+  useEffect(() => {
+    if (selectedLimit) {
+      setSpLimit(true);
+    } else {
+      setSpLimit(false);
+    }
+  }, [isFocused, selectedLimit]);
+
+  const onSwitch = (value, type) => {
+    if (type == "weekly") {
+      setSpLimit(!spLimit);
+      if (!selectedLimit && value) {
+        navigation.navigate("SpendingLimit");
+      } else if (selectedLimit && !value) {
+        dispatch(saveSpendingLimit(""));
+      }
+    } else {
+      setFreeze(!freeze);
+    }
   };
 
-  const ItemView = ({ item }) => {
-    const Image = item.image;
-    return (
-      <TouchableOpacity
-        style={styles.cardContainer}
-        onPress={() => onNavigate(item.id)}
-      >
-        <View style={universalStyle.row}>
-          <Image height={32 * ratioHeight} width={32 * ratioWidth} />
-          <View style={styles.midContainer}>
-            <Text style={styles.title}>{item.title}</Text>
-            <Text style={styles.description}>{item.description}</Text>
-          </View>
-        </View>
-        {item.toggle ? (
-          <Toggle selectedLimit={selectedLimit} id={item.id} />
-        ) : (
-          <Text></Text>
-        )}
-      </TouchableOpacity>
-    );
+  const onNavigate = () => {
+    navigation.navigate("SpendingLimit");
   };
 
   return (
     <View style={styles.container}>
-      <FlatList
-        data={serviceList || []}
-        renderItem={ItemView}
-        nestedScrollEnabled={true}
-        keyExtractor={(item) => item.id}
+      <ServiceCard
+        Icons={Insight}
+        title="Top-up account"
+        description="Deposit money to your account to use with card"
+      />
+      <ServiceCard
+        showToggle
+        value={spLimit}
+        Icons={Transfer}
+        cardPress={onNavigate}
+        onPress={(value) => onSwitch(value, "weekly")}
+        title="Weekly spending limit"
+        description="You haven’t set any spending limit on card"
+      />
+      <ServiceCard
+        showToggle
+        value={freeze}
+        onPress={() => onSwitch(value, "freeze")}
+        Icons={Freeze}
+        title="Freeze card"
+        description="Your debit card is currently active"
+      />
+      <ServiceCard
+        Icons={NewCard}
+        title="Get a new card"
+        description="This deactivates your cureent debit card"
+      />
+      <ServiceCard
+        Icons={Deactivate}
+        title="Deactivated cards"
+        description="Your previously deactivated cards"
       />
     </View>
   );

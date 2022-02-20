@@ -1,7 +1,9 @@
-export const getCardFormat = (cardNum) => {
-  let number = cardNum;
+export const getCardFormat = (cardNum, showDetail) => {
+  let number = showDetail
+    ? cardNum?.toString()
+    : `••••••••••••${cardNum?.toString().slice(12, 16)}`;
   const maxLength = 4;
-  const amountOfSpaces = Math.ceil(number.length / maxLength);
+  const amountOfSpaces = Math.ceil(number?.length / maxLength);
   var counter = 0;
   for (var i = 1; i <= amountOfSpaces; i++) {
     var space_index = i * 4 + (i - 1);
@@ -12,4 +14,13 @@ export const getCardFormat = (cardNum) => {
     counter += 2;
   }
   return number;
+};
+
+export const getCvv = (cvv, showDetail) => {
+  let cvvNum = showDetail ? cvv : "* * *";
+  return cvvNum;
+};
+
+export const numberWithCommas = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
