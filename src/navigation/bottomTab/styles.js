@@ -3,7 +3,7 @@ import { colors, fonts, ratioHeight } from "../../theme";
 
 const styles = StyleSheet.create({
   tab: {
-    height: 70,
+    height: 65,
     paddingBottom: 5 * ratioHeight,
     paddingTop: 5 * ratioHeight,
   },
