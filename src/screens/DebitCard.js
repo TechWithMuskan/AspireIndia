@@ -1,6 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useIsFocused } from "@react-navigation/native";
 import Container from "../containers/container";
 import CardDetail from "../components/organisms/cardDetail";
 import CardServices from "../components/organisms/cardServices";
@@ -11,11 +12,12 @@ import { fetchCardDetail, fetchSpendingLimit } from "../redux/action";
 
 const DebitCard = () => {
   const dispatch = useDispatch();
+  const isFocused = useIsFocused();
 
   useEffect(() => {
     dispatch(fetchSpendingLimit());
     dispatch(fetchCardDetail());
-  }, []);
+  }, [isFocused]);
 
   let weeklyLimit = useSelector((state) => state.common.weeklyLimit);
   const selectedLimit = weeklyLimit?.spLimit;

@@ -13,7 +13,7 @@ export const getCardFormat = (cardNum, showDetail) => {
       number.slice(space_index + counter);
     counter += 2;
   }
-  return number;
+  return number.trim();
 };
 
 export const getCvv = (cvv, showDetail) => {
@@ -21,6 +21,11 @@ export const getCvv = (cvv, showDetail) => {
   return cvvNum;
 };
 
-export const numberWithCommas = (number) => {
+export const formatCurrency = (number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+export const getPercentage = (spentLimit, selectedLimit) => {
+  let percentage = (spentLimit / selectedLimit) * 100;
+  return percentage;
 };

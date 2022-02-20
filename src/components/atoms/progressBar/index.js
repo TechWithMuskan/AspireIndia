@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React, { useState, useEffect } from "react";
 import styles from "./styles";
 import universalStyle from "../../../theme/universalStyle";
-import { numberWithCommas } from "../../../utils/constants";
+import { formatCurrency, getPercentage } from "../../../utils/constants";
 
 const ProgressBar = (props) => {
   const { selectedLimit } = props;
@@ -11,23 +11,18 @@ const ProgressBar = (props) => {
   const [percentage, setPercentage] = useState();
 
   useEffect(() => {
-    const percent = getPercentage();
+    const percent = getPercentage(spentLimit, selectedLimit);
     setPercentage(percent);
   }, []);
-
-  const getPercentage = () => {
-    let percentage = (spentLimit / selectedLimit) * 100;
-    return percentage;
-  };
 
   return (
     <View style={styles.container}>
       <View style={styles.progressContainer}>
         <Text style={styles.title}>Debit card spending limit</Text>
         <View style={universalStyle.row}>
-          <Text style={styles.amount}>${numberWithCommas(spentLimit)}</Text>
+          <Text style={styles.amount}>${formatCurrency(spentLimit)}</Text>
           <Text style={styles.limit}>
-            {` |  $${numberWithCommas(selectedLimit)}`}
+            {` |  $${formatCurrency(selectedLimit)}`}
           </Text>
         </View>
       </View>
