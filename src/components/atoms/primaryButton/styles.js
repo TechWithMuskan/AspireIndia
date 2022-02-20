@@ -17,9 +17,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.appPrimary,
   },
   label: {
-    fontSize: fonts.size.font17,
+    fontSize: fonts.size.font16,
     color: colors.white,
     fontFamily: fonts.type.AvenirNextDemiBold,
+    letterSpacing: 1,
   },
 });
 
