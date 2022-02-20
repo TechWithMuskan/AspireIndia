@@ -6,7 +6,7 @@ import universalStyle from "./src/theme/universalStyle";
 
 const App = () => {
   return (
-    <SafeAreaView style={universalStyle.flex1}>
+    <SafeAreaView style={universalStyle.safeArea}>
       <StatusBar
         backgroundColor={colors.appSecondary}
         barStyle="light-content"

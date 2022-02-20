@@ -38,7 +38,7 @@ const weight = {
 const type = {
   AvenirNextRegular: "AvenirNext-Regular",
   AvenirNextMedium: "AvenirNext-Medium",
-  AvenirNextDemiBold: "AvenirNext-Demi",
+  AvenirNextDemiBold: "AvenirNext-DemiBold",
   AvenirNextBold: "AvenirNext-Bold",
 };
 
