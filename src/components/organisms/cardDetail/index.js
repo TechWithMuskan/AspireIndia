@@ -5,7 +5,7 @@ import styles from "./styles";
 import universalStyle from "../../../theme/universalStyle";
 import Button from "../../../components/atoms/button";
 import { fetchBalance } from "../../../redux/action";
-import { numberWithCommas } from "../../../utils/constants";
+import { formatCurrency } from "../../../utils/constants";
 
 const CardDetail = () => {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const CardDetail = () => {
       <View style={universalStyle.row}>
         <Button label="S$" extraStyle={styles.buttonStyle} />
         <Text style={styles.title}>
-          {debitCard?.balance && numberWithCommas(debitCard?.balance)}
+          {debitCard?.balance && formatCurrency(debitCard?.balance)}
         </Text>
       </View>
     </View>

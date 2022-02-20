@@ -10,7 +10,7 @@ import { priceList } from "../../../global/config";
 import { setWeeklySpending } from "../../../redux/action";
 import Button from "../../atoms/button";
 import styles from "./styles";
-import { numberWithCommas } from "../../../utils/constants";
+import { formatCurrency } from "../../../utils/constants";
 
 const UpdateLimit = () => {
   const dispatch = useDispatch();
@@ -40,9 +40,7 @@ const UpdateLimit = () => {
         </View>
         <View style={styles.priceContainer}>
           <Button label="S$" />
-          <Text style={styles.amount}>
-            {amount && numberWithCommas(amount)}
-          </Text>
+          <Text style={styles.amount}>{amount && formatCurrency(amount)}</Text>
         </View>
         <Text style={styles.detail}>
           Here weekly means the last 7 days - not the calendar week
@@ -51,7 +49,7 @@ const UpdateLimit = () => {
         <View style={styles.bottomContainer}>
           {priceList.map((item) => (
             <TransparentButton
-              title={`S$ ${numberWithCommas(item.price)}`}
+              title={`S$ ${formatCurrency(item.price)}`}
               onPress={() => onSelect(item.price)}
             />
           ))}

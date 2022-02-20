@@ -68,7 +68,7 @@ const CardServices = (props) => {
       <ServiceCard
         showToggle
         value={freeze}
-        onPress={() => onSwitch(value, "freeze")}
+        onPress={(value) => onSwitch(value, "freeze")}
         Icons={Freeze}
         title="Freeze card"
         description="Your debit card is currently active"
