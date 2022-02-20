@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginBottom: 20 * ratioHeight,
   },
   cardNumber: {
-    fontSize: fonts.size.font14,
+    fontSize: fonts.size.font15,
     color: colors.white,
     fontFamily: fonts.type.AvenirNextDemiBold,
     marginRight: 8 * ratioWidth,
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     marginVertical: 8 * ratioHeight,
   },
   cvv: {
-    flexDirection: "row",
     marginLeft: 25 * ratioWidth,
   },
   thru: {

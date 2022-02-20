@@ -5,14 +5,18 @@ import CardDetail from "../components/organisms/cardDetail";
 import CardServices from "../components/organisms/cardServices";
 import Card from "../components/organisms/debitCard";
 import { colors, ratioHeight, ratioWidth } from "../theme";
+import ProgressBar from "../components/atoms/progressBar";
 
-const DebitCard = () => {
+const DebitCard = (props) => {
+  const selectedLimit = props?.route?.params?.selectedLimit;
+
   return (
     <View style={styles.container}>
       <Container headerContent={<CardDetail />} headerTitle="Debit Card">
         <View style={styles.subContainer}>
           <Card />
-          <CardServices />
+          {selectedLimit && <ProgressBar selectedLimit={selectedLimit} />}
+          <CardServices selectedLimit={selectedLimit} />
         </View>
       </Container>
     </View>

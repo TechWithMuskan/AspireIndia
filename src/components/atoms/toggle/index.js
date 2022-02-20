@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ToggleSwitch from "toggle-switch-react-native";
 import { colors } from "../../../theme";
 
-const Toggle = () => {
-  const [toggle, setToggle] = useState(true);
+const Toggle = (props) => {
+  const { selectedLimit, id } = props;
+  const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    if (selectedLimit && id === 2) setToggle(true);
+  }, [selectedLimit]);
+
   return (
     <ToggleSwitch
       isOn={toggle}

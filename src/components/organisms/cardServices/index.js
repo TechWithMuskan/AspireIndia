@@ -7,7 +7,8 @@ import Toggle from "../../atoms/toggle";
 import { serviceList } from "../../../global/config";
 import styles from "./styles";
 
-const CardServices = () => {
+const CardServices = (props) => {
+  const { selectedLimit } = props;
   const navigation = useNavigation();
 
   const onNavigate = (id) => {
@@ -28,7 +29,11 @@ const CardServices = () => {
             <Text style={styles.description}>{item.description}</Text>
           </View>
         </View>
-        {item.toggle ? <Toggle /> : <Text></Text>}
+        {item.toggle ? (
+          <Toggle selectedLimit={selectedLimit} id={item.id} />
+        ) : (
+          <Text></Text>
+        )}
       </TouchableOpacity>
     );
   };

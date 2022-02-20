@@ -3,7 +3,7 @@ import SpendingLimit from "../components/organisms/spendingLimit";
 import { NavigationContainer } from "@react-navigation/native";
 import BottomTab from "../navigation/bottomTab";
 import { createStackNavigator } from "@react-navigation/stack";
-import Credit from "../screens/Credit";
+import DebitCard from "../screens/DebitCard";
 
 const Stack = createStackNavigator();
 
@@ -25,10 +25,11 @@ const AppRouter = () => {
           component={SpendingLimit}
           options={options}
         />
-        <Stack.Screen 
-          name="Credit" 
-          component={Credit} 
-          options={options} />
+        <Stack.Screen
+          name="DebitCard"
+          component={DebitCard}
+          options={options}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
