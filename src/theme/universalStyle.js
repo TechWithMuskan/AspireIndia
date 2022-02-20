@@ -28,6 +28,10 @@ const universalStyle = StyleSheet.create({
     color: colors.appPrimary,
     margin: 30 * ratioHeight,
   },
+  safeArea: {
+    flex: 1,
+    backgroundColor: colors.appSecondary,
+  },
 });
 
 export default universalStyle;

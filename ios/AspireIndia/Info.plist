@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>AspireIndia</string>
+	<string>Aspire India</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -69,6 +69,10 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>AvenirNext-Bold.otf</string>
+		<string>AvenirNext-Demi.otf</string>
+		<string>AvenirNext-Medium.otf</string>
+		<string>AvenirNext-Regular.otf</string>
 	</array>
 </dict>
 </plist>
