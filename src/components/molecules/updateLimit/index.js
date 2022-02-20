@@ -48,7 +48,11 @@ const UpdateLimit = () => {
       <PrimaryButton
         disabled={disabled}
         title="Save"
-        onPress={() => navigation.navigate("BottomTab")}
+        onPress={() =>
+          navigation.navigate("DebitCard", {
+            selectedLimit: amount,
+          })
+        }
       />
     </View>
   );
