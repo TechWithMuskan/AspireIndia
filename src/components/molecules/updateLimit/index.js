@@ -24,7 +24,7 @@ const UpdateLimit = () => {
   };
 
   const saveSpendingLimit = () => {
-    dispatch(setWeeklySpending(amount));
+    dispatch(setWeeklySpending({ amount: amount }));
     navigation.navigate("BottomTab");
     setAmount(null);
   };

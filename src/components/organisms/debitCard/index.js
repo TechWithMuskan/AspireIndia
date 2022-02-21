@@ -47,8 +47,14 @@ const DebitCard = () => {
         </Text>
         <View style={styles.bottomContainer}>
           <Text style={styles.thru}>Thru: {cardData.thru}</Text>
-          <Text style={[styles.cvv, styles.thru]}>
-            CVV: {getCvv(cardData.cvv, showDetail)}
+          <Text style={styles.cvv}>CVV: </Text>
+          <Text
+            style={[
+              styles.thru,
+              showDetail ? styles.showCvv : styles.hiddenCvv,
+            ]}
+          >
+            {getCvv(cardData.cvv, showDetail)}
           </Text>
         </View>
         <View style={universalStyle.alignEnd}>

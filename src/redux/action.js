@@ -45,3 +45,16 @@ export function saveSpendingLimit(data) {
     payload: data,
   };
 }
+
+export function fetchSpentLimit() {
+  return {
+    type: Constant.SPENT_LIMIT,
+  };
+}
+
+export function saveSpentLimit(data) {
+  return {
+    type: Constant.SAVE_SPENT_LIMIT,
+    payload: data,
+  };
+}

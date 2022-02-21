@@ -15,3 +15,7 @@ export const setSpendingLimit = (data) => {
 export const getSpendingLimit = () => {
   return ApiMethod.get("/api/spending-limit");
 };
+
+export const getSpentLimit = () => {
+  return ApiMethod.get("/api/spent-limit");
+};

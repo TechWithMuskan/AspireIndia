@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import styles from "./styles";
 import universalStyle from "../../../theme/universalStyle";
 import { formatCurrency, getPercentage } from "../../../utils/constants";
@@ -7,13 +8,16 @@ import { formatCurrency, getPercentage } from "../../../utils/constants";
 const ProgressBar = (props) => {
   const { selectedLimit } = props;
 
-  const [spentLimit, setSpentLmit] = useState(3450);
+  const [spentLimit, setSpentLimit] = useState(3450);
   const [percentage, setPercentage] = useState();
+
+  const spentAmount = useSelector((state) => state.common.spentAmount);
 
   useEffect(() => {
     const percent = getPercentage(spentLimit, selectedLimit);
     setPercentage(percent);
-  }, []);
+    setSpentLimit(spentAmount?.spent);
+  }, [spentAmount]);
 
   return (
     <View style={styles.container}>

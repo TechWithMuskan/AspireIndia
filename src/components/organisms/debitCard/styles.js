@@ -32,16 +32,29 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flexDirection: "row",
-    marginVertical: 8 * ratioHeight,
-  },
-  cvv: {
-    marginLeft: 25 * ratioWidth,
+    marginTop: 6 * ratioHeight,
+    marginBottom: 4 * ratioHeight,
   },
   thru: {
     fontSize: fonts.size.font13,
     color: colors.white,
     fontFamily: fonts.type.AvenirNextDemiBold,
     marginTop: 3 * ratioHeight,
+  },
+  cvv: {
+    fontSize: fonts.size.font13,
+    marginLeft: 25 * ratioWidth,
+    color: colors.white,
+    fontFamily: fonts.type.AvenirNextDemiBold,
+    marginTop: 3 * ratioHeight,
+  },
+  showCvv: {
+    fontSize: fonts.size.font13,
+  },
+  hiddenCvv: {
+    fontSize: fonts.size.font22,
+    marginTop: 2 * ratioHeight,
+    letterSpacing: 1.5,
   },
 });
 

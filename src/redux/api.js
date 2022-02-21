@@ -25,17 +25,25 @@ const startMockServer = () => {
       });
 
       this.post("/api/spending-limit", (schema, request) => {
-        let limit = JSON.parse(request.requestBody);
+        let data = JSON.parse(request.requestBody);
         server.db.loadData({
-          amount: { spLimit: limit },
+          amount: data,
         });
-        return limit;
+        return data;
       });
 
       this.get("/api/spending-limit", async () => {
         const response = {
-          spendingAmount:
-            (await (server.db.amount && server.db.amount[0])) || null,
+          spLimit:
+            (await (server.db.amount &&
+              server.db.amount[server.db.amount?.length - 1])) || null,
+        };
+        return response;
+      });
+
+      this.get("/api/spent-limit", () => {
+        const response = {
+          spent: server.db.spent || 3450,
         };
         return response;
       });

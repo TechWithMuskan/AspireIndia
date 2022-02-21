@@ -17,7 +17,7 @@ export const getCardFormat = (cardNum, showDetail) => {
 };
 
 export const getCvv = (cvv, showDetail) => {
-  let cvvNum = showDetail ? cvv : "* * *";
+  let cvvNum = showDetail ? cvv : "***";
   return cvvNum;
 };
 

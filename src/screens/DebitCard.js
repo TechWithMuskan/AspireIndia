@@ -8,7 +8,11 @@ import CardServices from "../components/organisms/cardServices";
 import Card from "../components/organisms/debitCard";
 import { colors, ratioHeight, ratioWidth } from "../theme";
 import ProgressBar from "../components/atoms/progressBar";
-import { fetchCardDetail, fetchSpendingLimit } from "../redux/action";
+import {
+  fetchCardDetail,
+  fetchSpendingLimit,
+  fetchSpentLimit,
+} from "../redux/action";
 
 const DebitCard = () => {
   const dispatch = useDispatch();
@@ -17,10 +21,11 @@ const DebitCard = () => {
   useEffect(() => {
     dispatch(fetchSpendingLimit());
     dispatch(fetchCardDetail());
+    dispatch(fetchSpentLimit());
   }, [isFocused]);
 
   let weeklyLimit = useSelector((state) => state.common.weeklyLimit);
-  const selectedLimit = weeklyLimit?.spLimit;
+  const selectedLimit = weeklyLimit?.amount;
 
   return (
     <View style={styles.container}>
