@@ -1,13 +1,14 @@
-import { View, Text } from "react-native";
 import React from "react";
-import styles from "./styles";
+import { View, Text } from "react-native";
+import { useNavigation } from "@react-navigation/core";
 import { LogoFocused } from "../../../theme/svgs";
 import Icon from "../../../utils/icons";
-import { useNavigation } from "@react-navigation/core";
+import styles from "./styles";
 
 const Header = (props) => {
   const navigation = useNavigation();
   const { children, title, showBack } = props;
+
   return (
     <View style={styles.container}>
       <View style={styles.subContainer}>

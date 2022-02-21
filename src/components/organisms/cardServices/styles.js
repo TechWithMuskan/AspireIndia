@@ -1,29 +1,10 @@
 import { StyleSheet } from "react-native";
-import { colors, fonts, ratioHeight, ratioWidth } from "../../../theme";
+import { ratioWidth } from "../../../theme";
 
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10 * ratioWidth,
     paddingVertical: 10 * ratioWidth,
-  },
-  cardContainer: {
-    paddingHorizontal: 5 * ratioHeight,
-    paddingVertical: 10 * ratioHeight,
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  midContainer: {
-    marginLeft: 15 * ratioWidth,
-  },
-  title: {
-    fontFamily: fonts.type.AvenirNextMedium,
-    fontSize: fonts.size.font14,
-    color: colors.appSecondary,
-  },
-  description: {
-    fontFamily: fonts.type.AvenirNextRegular,
-    fontSize: fonts.size.font12,
-    color: colors.textSecondary,
   },
 });
 

@@ -9,8 +9,10 @@ import configStore from "./src/store/ConfigStore";
 
 const App = () => {
   const { store } = configStore();
+
   startMockServer();
   LogBox.ignoreAllLogs();
+
   return (
     <Provider store={store}>
       <SafeAreaView style={universalStyle.safeArea}>

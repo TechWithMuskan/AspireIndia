@@ -1,5 +1,5 @@
-import { View } from "react-native";
 import React from "react";
+import { View } from "react-native";
 import Container from "../../../containers/container";
 import UpdateLimit from "../../molecules/updateLimit";
 import universalStyle from "../../../theme/universalStyle";

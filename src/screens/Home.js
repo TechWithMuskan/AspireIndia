@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { View, Text } from "react-native";
 import Container from "../containers/container";
 import universalStyle from "../theme/universalStyle";
 
