@@ -1,9 +1,9 @@
 import React from "react";
-import SpendingLimit from "../components/organisms/spendingLimit";
 import { NavigationContainer } from "@react-navigation/native";
-import BottomTab from "../navigation/bottomTab";
 import { createStackNavigator } from "@react-navigation/stack";
 import DebitCard from "../screens/DebitCard";
+import SpendingLimit from "../components/organisms/spendingLimit";
+import BottomTab from "../navigation/bottomTab";
 
 const Stack = createStackNavigator();
 

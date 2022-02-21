@@ -1,9 +1,9 @@
-import { View, Text } from "react-native";
 import React, { useState, useEffect } from "react";
+import { View, Text } from "react-native";
 import { useSelector } from "react-redux";
-import styles from "./styles";
-import universalStyle from "../../../theme/universalStyle";
 import { formatCurrency, getPercentage } from "../../../utils/constants";
+import universalStyle from "../../../theme/universalStyle";
+import styles from "./styles";
 
 const ProgressBar = (props) => {
   const { selectedLimit } = props;

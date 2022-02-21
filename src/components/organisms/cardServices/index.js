@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
+import { useIsFocused } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/core";
 import { useDispatch } from "react-redux";
-
-import { useIsFocused } from "@react-navigation/native";
-import styles from "./styles";
 import ServiceCard from "../../atoms/serviceCard";
 import {
   Insight,
@@ -14,12 +12,14 @@ import {
   Deactivate,
 } from "../../../theme/svgs";
 import { saveSpendingLimit } from "../../../redux/action";
+import styles from "./styles";
 
 const CardServices = (props) => {
   const { selectedLimit } = props;
+
+  const dispatch = useDispatch();
   const navigation = useNavigation();
   const isFocused = useIsFocused();
-  const dispatch = useDispatch();
 
   const [spLimit, setSpLimit] = useState(false);
   const [freeze, setFreeze] = useState(false);
