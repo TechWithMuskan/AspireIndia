@@ -1,11 +1,11 @@
-import { View, Text } from "react-native";
 import React, { useState, useEffect } from "react";
+import { View, Text } from "react-native";
 import { useSelector } from "react-redux";
-import styles from "./styles";
 import { getCardFormat, getCvv } from "../../../utils/constants";
 import { AspireLogo, VisaLogo } from "../../../theme/svgs";
 import universalStyle from "../../../theme/universalStyle";
 import IconButton from "../../../components/atoms/iconButton";
+import styles from "./styles";
 
 const DebitCard = () => {
   const [cardData, setCardData] = useState({
@@ -14,7 +14,6 @@ const DebitCard = () => {
     cvv: 0,
     thru: "",
   });
-
   const [showDetail, setShow] = useState(false);
 
   const cardDetail = useSelector((state) => state.common.cardDetail);

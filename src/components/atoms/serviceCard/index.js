@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import Toggle from "../toggle";
-import styles from "./styles";
-import universalStyle from "../../../theme/universalStyle";
 import { ratioHeight, ratioWidth } from "../../../theme";
+import universalStyle from "../../../theme/universalStyle";
+import styles from "./styles";
 
 const ServiceCard = (props) => {
   const { showToggle, Icons, value, onPress, title, description, cardPress } =
     props;
+
   return (
     <TouchableOpacity style={styles.cardContainer} onPress={cardPress}>
       <View style={universalStyle.row}>
@@ -17,7 +18,7 @@ const ServiceCard = (props) => {
           <Text style={styles.description}>{description}</Text>
         </View>
       </View>
-      {showToggle ? <Toggle onPress={onPress} value={value} /> : <Text></Text>}
+      {showToggle && <Toggle onPress={onPress} value={value} />}
     </TouchableOpacity>
   );
 };

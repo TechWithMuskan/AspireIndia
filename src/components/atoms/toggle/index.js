@@ -8,10 +8,10 @@ const Toggle = (props) => {
   return (
     <ToggleSwitch
       isOn={value}
+      onToggle={onPress}
       onColor={colors.appPrimary}
       offColor={colors.lightGrey}
       size="small"
-      onToggle={onPress}
     />
   );
 };

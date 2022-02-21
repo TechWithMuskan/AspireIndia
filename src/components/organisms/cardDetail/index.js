@@ -1,11 +1,11 @@
-import { View, Text } from "react-native";
 import React, { useEffect } from "react";
+import { View, Text } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import styles from "./styles";
-import universalStyle from "../../../theme/universalStyle";
 import Button from "../../../components/atoms/button";
 import { fetchBalance } from "../../../redux/action";
 import { formatCurrency } from "../../../utils/constants";
+import universalStyle from "../../../theme/universalStyle";
+import styles from "./styles";
 
 const CardDetail = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const CardDetail = () => {
   let debitCard = useSelector((state) => state.common.debitCard);
 
   return (
-    <View>
+    <>
       <Text style={styles.balance}>Available balance</Text>
       <View style={universalStyle.row}>
         <Button label="S$" extraStyle={styles.buttonStyle} />
@@ -25,7 +25,7 @@ const CardDetail = () => {
           {debitCard?.balance && formatCurrency(debitCard?.balance)}
         </Text>
       </View>
-    </View>
+    </>
   );
 };
 

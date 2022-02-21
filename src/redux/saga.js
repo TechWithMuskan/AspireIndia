@@ -21,7 +21,7 @@ function* getBalanceSaga() {
       yield put(saveBalance(response));
     }
   } catch (error) {
-    console.log("error", error);
+    console.log("balance error", error);
   }
 }
 
@@ -32,7 +32,7 @@ function* getCardDetailSaga() {
       yield put(saveCardDetail(response));
     }
   } catch (error) {
-    console.log("error", error);
+    console.log("card detail error", error);
   }
 }
 
@@ -43,7 +43,7 @@ function* setSpendingLimitSaga(data) {
       // alert("Success!");
     }
   } catch (error) {
-    console.log("error", error);
+    console.log("set limit error", error);
   }
 }
 
@@ -54,7 +54,7 @@ function* getSpendingLimitSaga() {
       yield put(saveSpendingLimit(response?.spLimit));
     }
   } catch (error) {
-    console.log("error", error);
+    console.log("get limit error", error);
   }
 }
 
@@ -65,7 +65,7 @@ function* getSpentLimitSaga() {
       yield put(saveSpentLimit(response));
     }
   } catch (error) {
-    console.log("error", error);
+    console.log("spent limit error", error);
   }
 }
 

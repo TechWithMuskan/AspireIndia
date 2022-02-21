@@ -7,6 +7,7 @@ import { colors } from "../theme";
 
 const Icon = (props) => {
   const { type, name, size, color, extraStyles, onPress } = props;
+
   return (
     <View style={extraStyles}>
       {type === "MaterialIcons" ? (

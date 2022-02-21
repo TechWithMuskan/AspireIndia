@@ -1,10 +1,11 @@
-import { Text, TouchableOpacity } from "react-native";
 import React from "react";
-import styles from "./styles";
+import { Text, TouchableOpacity } from "react-native";
 import { CloseEye, OpenEye } from "../../../theme/svgs";
+import styles from "./styles";
 
 const IconButton = (props) => {
   const { showDetail, onPress, extraStyle, label } = props;
+
   return (
     <TouchableOpacity
       onPress={onPress}
