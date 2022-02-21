@@ -2,8 +2,9 @@ import * as Constant from "./constant";
 
 const initialState = {
   debitCard: {},
-  weeklyLimit: 0,
+  weeklyLimit: null,
   cardDetail: {},
+  spentAmount: {},
 };
 
 const common = (state = initialState, action) => {
@@ -22,6 +23,11 @@ const common = (state = initialState, action) => {
       return {
         ...state,
         cardDetail: action.payload,
+      };
+    case Constant.SAVE_SPENT_LIMIT:
+      return {
+        ...state,
+        spentAmount: action.payload,
       };
     default:
       return state;

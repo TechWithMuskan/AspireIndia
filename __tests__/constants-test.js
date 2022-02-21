@@ -17,7 +17,7 @@ it("test cvv values with true value", () => {
 
 it("test cvv values with false value", () => {
   const result = getCvv(444, false);
-  expect(result).toBe("* * *");
+  expect(result).toBe("***");
 });
 
 it("test card values with true value", () => {

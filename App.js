@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBar, SafeAreaView } from "react-native";
+import { StatusBar, SafeAreaView, LogBox } from "react-native";
 import { Provider } from "react-redux";
 import { colors } from "./src/theme";
 import AppRouter from "./src/navigation/AppRouter";
@@ -10,6 +10,7 @@ import configStore from "./src/store/ConfigStore";
 const App = () => {
   const { store } = configStore();
   startMockServer();
+  LogBox.ignoreAllLogs();
   return (
     <Provider store={store}>
       <SafeAreaView style={universalStyle.safeArea}>

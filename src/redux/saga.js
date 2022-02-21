@@ -1,11 +1,17 @@
 import { call, put, takeEvery } from "redux-saga/effects";
-import { saveBalance, saveCardDetail, saveSpendingLimit } from "./action";
+import {
+  saveBalance,
+  saveCardDetail,
+  saveSpendingLimit,
+  saveSpentLimit,
+} from "./action";
 import * as Constant from "./constant";
 import {
   getBalance,
   setSpendingLimit,
   getSpendingLimit,
   getCardDetail,
+  getSpentLimit,
 } from "./service";
 
 function* getBalanceSaga() {
@@ -45,7 +51,18 @@ function* getSpendingLimitSaga() {
   try {
     const [response, status] = yield call(getSpendingLimit);
     if (status === 200) {
-      yield put(saveSpendingLimit(response.spendingAmount));
+      yield put(saveSpendingLimit(response?.spLimit));
+    }
+  } catch (error) {
+    console.log("error", error);
+  }
+}
+
+function* getSpentLimitSaga() {
+  try {
+    const [response, status] = yield call(getSpentLimit);
+    if (status === 200) {
+      yield put(saveSpentLimit(response));
     }
   } catch (error) {
     console.log("error", error);
@@ -57,4 +74,5 @@ export default function* commonSaga() {
   yield takeEvery(Constant.CARD_DETAIL, getCardDetailSaga);
   yield takeEvery(Constant.SET_SPENDING_LIMIT, setSpendingLimitSaga);
   yield takeEvery(Constant.SPENDING_LIMIT, getSpendingLimitSaga);
+  yield takeEvery(Constant.SPENT_LIMIT, getSpentLimitSaga);
 }
