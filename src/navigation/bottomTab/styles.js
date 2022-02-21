@@ -3,17 +3,17 @@ import { colors, fonts, ratioHeight } from "../../theme";
 
 const styles = StyleSheet.create({
   tab: {
-    height: 65,
+    height: 46 * ratioHeight,
     paddingBottom: 5 * ratioHeight,
     paddingTop: 5 * ratioHeight,
   },
   label: {
-    fontSize: fonts.size.font9,
+    fontSize: fonts.size.font10,
     fontFamily: fonts.type.AvenirNextMedium,
     color: colors.grey,
   },
   focusedLabel: {
-    fontSize: fonts.size.font9,
+    fontSize: fonts.size.font10,
     fontFamily: fonts.type.AvenirNextMedium,
     color: colors.appPrimary,
   },

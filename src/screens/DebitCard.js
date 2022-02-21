@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15 * ratioWidth,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    marginTop: 40 * ratioHeight,
+    marginTop: 50 * ratioHeight,
     backgroundColor: colors.white,
     zIndex: 1000,
   },
