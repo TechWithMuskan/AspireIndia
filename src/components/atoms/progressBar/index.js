@@ -17,7 +17,7 @@ const ProgressBar = (props) => {
     const percent = getPercentage(spentLimit, selectedLimit);
     setPercentage(percent);
     setSpentLimit(spentAmount?.spent);
-  }, [spentAmount]);
+  }, [spentAmount, selectedLimit]);
 
   return (
     <View style={styles.container}>

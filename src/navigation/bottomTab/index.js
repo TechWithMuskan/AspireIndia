@@ -9,6 +9,7 @@ const Tab = createBottomTabNavigator();
 const BottomTab = () => {
   return (
     <Tab.Navigator
+      initialRouteName="Debit Card"
       screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tab,

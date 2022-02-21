@@ -3,14 +3,15 @@ import { colors, fonts, ratioHeight, ratioWidth } from "../../../theme";
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 8 * ratioWidth,
-    marginTop: "-25%",
+    paddingHorizontal: 5 * ratioWidth,
+    marginTop: "-30%",
   },
   deditCard: {
     backgroundColor: colors.appPrimary,
-    padding: 20 * ratioHeight,
-    height: 170 * ratioHeight,
-    borderRadius: 20,
+    paddingHorizontal: 20 * ratioHeight,
+    paddingVertical: 15 * ratioHeight,
+    height: 165 * ratioHeight,
+    borderRadius: 10,
   },
   showCard: {
     alignItems: "flex-end",
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     fontSize: fonts.size.font21,
     color: colors.white,
     fontFamily: fonts.type.AvenirNextBold,
-    marginTop: 22 * ratioHeight,
+    marginTop: 18 * ratioHeight,
     marginBottom: 20 * ratioHeight,
   },
   cardNumber: {
@@ -32,8 +33,8 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flexDirection: "row",
-    marginTop: 6 * ratioHeight,
-    marginBottom: 4 * ratioHeight,
+    alignItems: "center",
+    marginVertical: 7 * ratioHeight,
   },
   thru: {
     fontSize: fonts.size.font13,
@@ -52,8 +53,7 @@ const styles = StyleSheet.create({
     fontSize: fonts.size.font13,
   },
   hiddenCvv: {
-    fontSize: fonts.size.font22,
-    marginTop: 2 * ratioHeight,
+    fontSize: fonts.size.font14,
     letterSpacing: 1.5,
   },
 });
